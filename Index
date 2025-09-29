@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Løbeklubben</title>
+  <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1>FTC - Byens hyggeløbeklub</h1>
+      <ul>
+        <li><a href="#about">Om os</a></li>
+        <li><a href="#events">Arrangementer</a></li>
+        <li><a href="#join">Bliv medlem</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Løb sammen. Bliv stærkere.</h2>
+    <p>Bliv en del af fællesskabet og oplev glæden ved at løbe.</p>
+    <a href="#join" class="btn">Tilmeld dig</a>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about">
+    <h2>Om os</h2>
+    <p>Vi er en venlig løbeklub åben for alle niveauer. Fra 5 km hyggeture til maratontræning – vi støtter hinanden hele vejen.</p>
+  </section>
+  
+  <!-- Events Section -->
+  <section id="events">
+    <h2>Kommende arrangementer</h2>
+    <div class="event">
+      <h3>5 km Hyggeløb</h3>
+      <p>Dato: 25. september 2025</p>
+      <button>Tilmeld</button>
+    </div>
+    <div class="event">
+      <h3>Maratontræning</h3>
+      <p>Dato: 10. oktober 2025</p>
+      <button>Tilmeld</button>
+    </div>
+  </section>
+  
+  <!-- Join Section -->
+  <section id="join">
+    <h2>Bliv medlem</h2>
+    <p>Tilmeld dig i dag og få adgang til træningsprogrammer, arrangementer og et fantastisk fællesskab.</p>
+    <button>Tilmeld dig</button>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Kontakt os</h2>
+    <form>
+      <label for="name">Navn:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Besked:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Løbeklubben | Følg os på 
+      <a href="#">Instagram</a> • <a href="#">Facebook</a>
+    </p>
+  </footer>
+  
+  <script src="Button.js"></script>
+
+  <script>
+    // Burger menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
+
