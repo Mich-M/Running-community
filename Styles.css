@@ -43,6 +43,41 @@ nav ul {
   gap: 1.5rem;
 }
 
+/* Team Members */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  max-width: 300px;          /* Bevarer rimelig bredde */
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.team-member img {
+  width: auto;               /* Billedet holder proportionerne */
+  max-width: 150px;          /* Ikke større end teksten */
+  display: block;
+  margin: 0 auto 1rem auto;  /* Centrerer billedet */
+  border-radius: 10px;       /* Bløde kanter */
+}
+
+/* Mobile stacking */
+@media (max-width: 500px) {
+  .team-members {
+    flex-direction: column; /* Stack members vertically */
+    align-items: center;    /* Center content */
+    gap: 1.5rem;            /* Slightly smaller spacing */
+  }
+
+  .team-member img {
+    max-width: 120px;       /* Slightly smaller images for mobile */
+  }
+}
+
 nav a {
   text-decoration: none;
   color: #333;
