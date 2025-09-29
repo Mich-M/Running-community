@@ -1,3 +1,15 @@
+// --- Kontaktformular check ---
+const contactForm = document.querySelector('#contact form');
+
+contactForm.addEventListener('submit', function(event) {
+  // Bekræft inden afsendelse
+  const confirmed = confirm('Er du sikker på, at dine oplysninger er korrekte?');
+
+  if (!confirmed) {
+    event.preventDefault(); // Stopper afsendelse
+  }
+});
+
 const joinButton = document.querySelector('#join button');
 
 joinButton.addEventListener('click', () => {
