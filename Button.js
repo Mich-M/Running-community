@@ -10,6 +10,49 @@ contactForm.addEventListener('submit', function(event) {
   }
 });
 
+let currentProgram = null;
+
+function showProgram(programId) {
+  const programs = ['beginner', 'intermediate', 'advanced'];
+
+  // Map buttons to programs
+  const buttonMap = {
+    beginner: document.getElementById('btn-beginner'),
+    intermediate: document.getElementById('btn-intermediate'),
+    advanced: document.getElementById('btn-advanced')
+  };
+
+  // If clicking the same program, hide it
+  if (currentProgram === programId) {
+    document.getElementById(programId).style.display = 'none';
+    buttonMap[programId].innerText = capitalize(programId); // reset button text
+    currentProgram = null;
+    return;
+  }
+
+  // Hide all programs and reset button texts
+  programs.forEach(id => {
+    document.getElementById(id).style.display = 'none';
+    buttonMap[id].innerText = capitalize(id);
+  });
+
+  // Show the selected program and update button text
+  document.getElementById(programId).style.display = 'block';
+  buttonMap[programId].innerText = capitalize(programId) + ' (Skjul)';
+  currentProgram = programId;
+}
+
+// Helper function to capitalize Danish names properly
+function capitalize(id) {
+  switch(id) {
+    case 'beginner': return 'Nybegynder';
+    case 'intermediate': return 'Letøvede';
+    case 'advanced': return 'Øvede';
+    default: return id;
+  }
+}
+
+
 const joinButton = document.querySelector('#join button');
 
 joinButton.addEventListener('click', () => {

@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.4, maximum-scale=3.0">
   <title>Løbeklubben</title>
   <link rel="stylesheet" href="Styles.css">
 </head>
@@ -16,6 +16,7 @@
       <ul>
         <li><a href="om-os.html">Om os</a></li>
         <li><a href="#events">Arrangementer</a></li>
+        <li><a href="#training">Træningsprogrammer</a></li>
         <li><a href="#join">Bliv medlem</a></li>
         <li><a href="#contact">Kontakt</a></li>
       </ul>
@@ -35,13 +36,90 @@
     <p>Vi er en venlig løbeklub åben for alle niveauer. Fra 5 km hyggeture til maratontræning – vi støtter hinanden hele vejen.</p>
   </section>
   
+  <!-- Weekly Training Section -->
+  <section id="training">
+    <h2>Træningsprogrammer</h2>
+    <p>Vores ugentlige træningsprogrammer er tilpasset alle niveauer 
+      – fra nybegyndere til erfarne løbere. Følg vores plan og bliv stærkere uge for uge.</p>
+
+<!-- Tab buttons -->
+<div class="tabs">
+  <button id="btn-beginner" class="btn-info" onclick="showProgram('beginner')">Nybegynder</button>
+  <button id="btn-intermediate" class="btn-info" onclick="showProgram('intermediate')">Letøvede</button>
+  <button id="btn-advanced" class="btn-info" onclick="showProgram('advanced')">Øvede</button>
+</div>
+
+<!-- Training programs (white boxes) -->
+<div id="beginner" class="training-program">
+  <h3>Nybegynder – 5 km</h3>
+  <ul>
+    <li>Uge 1-2: 1-2 km roligt løb, 2 gange om ugen</li>
+    <li>Uge 3-4: 2-3 km løb, 3 gange om ugen</li>
+    <li>Uge 5-6: 3-4 km løb, små intervaltræninger</li>
+  </ul>
+</div>
+
+<div id="intermediate" class="training-program">
+  <h3>Letøvede – 10 km</h3>
+  <ul>
+    <li>Uge 1: 5 km roligt + 3 km tempo</li>
+    <li>Uge 2: 6 km roligt + 4 km intervaller</li>
+    <li>Uge 3: 7 km roligt + 5 km tempoløb</li>
+    <li>Uge 4: 8 km langt løb + restitution</li>
+  </ul>
+</div>
+
+<div id="advanced" class="training-program">
+  <h3>Øvede – Halvmaraton/Maraton</h3>
+  <ul>
+    <li>Uge 1: 10 km roligt + styrketræning</li>
+    <li>Uge 2: 12 km langt løb + 5 km intervaller</li>
+    <li>Uge 3: 15 km roligt + tempo 6 km</li>
+    <li>Uge 4: 18 km langt løb + restitution og stræk</li>
+  </ul>
+</div> 
+
+</div>
+
+      
+    <!-- <div class="training-program">
+      <h3>Nybegynder - 5 km</h3>
+      <p>En let start for dig, der vil i gang med at løbe. Fokus på opbygning af udholdenhed og løbeteknik.</p>
+      <div class="training-buttons">
+        <button class="btn-info" onclick="window.location.href='training-beginners.html'">
+          Se program
+        </button>
+      </div>
+    </div>
+
+    <div class="training-program">
+      <h3>Letøvede - 10 km</h3>
+      <p>For dig, der allerede kan løbe 5 km. Programmet inkluderer intervaltræning og tempoløb.</p>
+      <div class="training-buttons">
+        <button class="btn-info" onclick="window.location.href='training-intermediate.html'">
+          Se program
+        </button>
+      </div>
+    </div>
+
+    <div class="training-program">
+      <h3>Øvede - Halvmaraton/Maraton</h3>
+      <p>Avanceret træning for dig, der vil udfordre dig selv. Fokus på langdistanceløb, styrke og restitution.</p>
+      <div class="training-buttons">
+        <button class="btn-info" onclick="window.location.href='training-advanced.html'">
+          Se program
+        </button>
+      </div>
+    </div>
+  </section> -->
+
   <!-- Events Section -->
   <section id="events">
     <h2>Kommende arrangementer</h2>
 
     <div class="event">
-      <h3>5 km Hyggeløb</h3>
-      <p>Dato: 25. september 2025</p>
+      <h3>Parkrun - 5 km Hyggeløb</h3>
+      <p>Hver lørdag året rundt</p>
       <div class="event-buttons">
         <button class="btn-info" onclick="window.location.href='event-5km.html'">
           Læs mere
@@ -65,7 +143,7 @@
   <section id="join">
     <h2>Bliv medlem</h2>
     <p>Tilmeld dig i dag og få adgang til træningsprogrammer, arrangementer og et fantastisk fællesskab.</p>
-    <button>Tilmeld dig</button>
+    <button class="btn-info">Tilmeld dig</button>
   </section>
   
   <!-- Contact Section -->
