@@ -1,3 +1,4 @@
+
 // --- Kontaktformular check with fancy modal ---
 const contactForm = document.querySelector('#contact form');
 const modal = document.getElementById('confirmationModal');
