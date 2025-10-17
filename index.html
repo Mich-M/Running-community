@@ -170,7 +170,7 @@
   </section>
   
   <!-- Contact Section -->
-    <main id="contact">
+  <main id="contact">
     <form>
       <label for="name">Navn:</label>
       <input type="text" id="name" name="name" required>
@@ -183,18 +183,18 @@
 
       <button type="submit">Send</button>
     </form>
-  </main>
 
-  <!-- ✨ Fancy confirmation modal ✨ -->
-  <div id="confirmationModal" class="modal">
-    <div class="modal-content">
-      <p>Er du sikker på, at dine oplysninger er korrekte?</p>
-      <div class="modal-buttons">
-        <button id="cancelBtn">Annuller</button>
-        <button id="okBtn">OK</button>
+    <!-- ✨ Fancy confirmation modal ✨ -->
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <p>Er du sikker på, at dine oplysninger er korrekte?</p>
+        <div class="modal-buttons">
+          <button id="cancelBtn">Annuller</button>
+          <button id="okBtn">OK</button>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -202,8 +202,10 @@
       <a href="#">Instagram</a> • <a href="#">Facebook</a>
     </p>
   </footer>
-  
-  <script src="Button.js"></script>
+
+  <!-- Corrected CSS and JS references -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="button.js"></script>
 
   <script>
     // Burger menu toggle

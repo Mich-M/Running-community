@@ -13,17 +13,21 @@ if (contactForm && modal) {
   okBtn.addEventListener('click', () => {
     modal.style.display = 'none';
 
-    // Show thank-you message on the page
+    // Show thank-you message
     const thankYouMsg = document.createElement('p');
     thankYouMsg.textContent = '🎉 Tak for beskeden! Vi svarer hurtigst muligt.';
     thankYouMsg.style.color = '#28a745';
     thankYouMsg.style.textAlign = 'center';
-    thankYouMsg.style.marginTop = '20px';
-    thankYouMsg.style.marginBottom = '20px';
+    thankYouMsg.style.margin = '20px 0';
     thankYouMsg.style.fontWeight = 'bold';
-    contactForm.parentNode.insertBefore(thankYouMsg, contactForm.nextSibling);
 
-    contactForm.reset(); // clear the form
+    contactForm.parentNode.insertBefore(thankYouMsg, contactForm.nextSibling);
+    contactForm.reset();
+
+    // Auto-hide after 10 seconds
+    setTimeout(() => {
+      thankYouMsg.remove();
+    }, 10000);
   });
 
   cancelBtn.addEventListener('click', () => {
