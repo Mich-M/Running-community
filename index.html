@@ -151,10 +151,10 @@
     </div>
 
     <div class="event">
-      <h3>Maratontræning</h3>
-      <p>Dato: 10. oktober 2025</p>
+      <h3>Løbsstævner</h3>
+      <p>Banestævne, Landevejsløb, Trailløb og Crossløb.</p>
       <div class="event-buttons">
-        <button class="btn-info" onclick="window.location.href='event-maraton.html'">
+        <button class="btn-info" onclick="window.location.href='events.html'">
           Læs mere
         </button>
       </div>
@@ -170,22 +170,30 @@
   </section>
   
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Kontakt os</h2>
+    <main id="contact">
     <form>
       <label for="name">Navn:</label>
       <input type="text" id="name" name="name" required>
-      
-      <label for="email">E-mail:</label>
+
+      <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
-      
+
       <label for="message">Besked:</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-      
+      <textarea id="message" name="message" rows="5" required></textarea>
+
       <button type="submit">Send</button>
     </form>
-  </section>
-  
+  </main>
+
+  <!-- ✨ Fancy confirmation modal ✨ -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <p>Er du sikker på, at dine oplysninger er korrekte?</p>
+      <div class="modal-buttons">
+        <button id="cancelBtn">Annuller</button>
+        <button id="okBtn">OK</button>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -203,6 +211,17 @@
       document.querySelector('nav ul').classList.toggle('active');
     });
   </script>
+
+  <!-- Place this somewhere in your HTML, e.g., at the end of <body> -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <p>Er du sikker på, at dine oplysninger er korrekte?</p>
+      <div class="modal-buttons">
+        <button id="cancelBtn">Annuller</button>
+        <button id="okBtn">OK</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

@@ -1,9 +1,33 @@
-// --- Kontaktformular check ---
+// --- Kontaktformular check with fancy modal ---
 const contactForm = document.querySelector('#contact form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(event) {
-    const confirmed = confirm('Er du sikker på, at dine oplysninger er korrekte?');
-    if (!confirmed) event.preventDefault();
+const modal = document.getElementById('confirmationModal');
+const okBtn = document.getElementById('okBtn');
+const cancelBtn = document.getElementById('cancelBtn');
+
+if (contactForm && modal) {
+  contactForm.addEventListener('submit', event => {
+    event.preventDefault(); // stop immediate submission
+    modal.style.display = 'flex'; // show modal
+  });
+
+  okBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+
+    // Show thank-you message on the page
+    const thankYouMsg = document.createElement('p');
+    thankYouMsg.textContent = '🎉 Tak for beskeden! Vi svarer hurtigst muligt.';
+    thankYouMsg.style.color = '#28a745';
+    thankYouMsg.style.textAlign = 'center';
+    thankYouMsg.style.marginTop = '20px';
+    thankYouMsg.style.marginBottom = '20px';
+    thankYouMsg.style.fontWeight = 'bold';
+    contactForm.parentNode.insertBefore(thankYouMsg, contactForm.nextSibling);
+
+    contactForm.reset(); // clear the form
+  });
+
+  cancelBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
   });
 }
 

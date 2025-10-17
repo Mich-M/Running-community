@@ -212,8 +212,9 @@ section p {
   line-height: 1.8;       /* optional: improves readability */
 }
 
-.center-header {
+.event-page h2 {
   text-align: center;
+  color: #ff6b6b;
 }
 
 .event h3 {
@@ -223,6 +224,12 @@ section p {
 
 .event p {
   margin-bottom: 1rem;
+}
+
+.race-types-inline {
+  text-align: left;  /* Align text to left */
+  margin: 10px 0;    /* Optional spacing above/below */
+  font-weight: normal;
 }
 
 /* Event buttons */
@@ -419,4 +426,95 @@ footer a:hover {
   display: none;
 }
 
-/* Language switcher button */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 10px; /* small space between images */
+  justify-content: center; /* center the grid horizontally */
+  max-width: 900px; /* optional: limit total width */
+  margin: 20px auto; /* center gallery on page */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+  animation: popIn 0.25s ease;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#okBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+#okBtn:hover {
+  background-color: #218838;
+}
+
+#cancelBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+#cancelBtn:hover {
+  background-color: #c82333;
+}
+
+#contact form {
+  margin-bottom: 20px;
+}
+
+/* ✨ simple animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
