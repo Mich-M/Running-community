@@ -181,6 +181,13 @@ section {
   padding: 0 2rem;
 }
 
+.about-images img {
+  width: 30%;          /* 3 images per row */
+  aspect-ratio: 1 / 1; /* keeps square ratio */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -192,6 +199,19 @@ section p {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 2rem auto;
+}
+
+/* Specific spacing tweaks for training and events */
+#training {
+  margin-bottom: 1rem; /* default was 4rem */
+}
+
+#training p {
+  margin-bottom: 1rem; /* default was 2rem */
+}
+
+#events {
+  margin-top: 1rem; /* default was 4rem */
 }
 
 /* Events */

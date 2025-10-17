@@ -77,6 +77,26 @@ function capitalize(id) {
   }
 }
 
+// --- Scroller ----
+const header = document.querySelector('header');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll) {
+    // Scrolling down -> hide header fast
+    header.style.transition = 'top 0.1s ease-in';
+    header.style.top = '-100px';
+  } else {
+    // Scrolling up -> show header
+    header.style.transition = 'top 0.1s ease-out';
+    header.style.top = '0';
+  }
+
+  lastScroll = currentScroll;
+});
+
 // --- Language button logic ---
 document.addEventListener("DOMContentLoaded", function () {
   const languageButton = document.getElementById('language-toggle');
@@ -125,7 +145,7 @@ if (joinButton) {
     popupWindow.document.write(`
       <html>
       <head>
-        <title>Tilmelding til løbeklub</title>
+        <title>Tilmelding til FTC</title>
         <style>
           body { font-family: Arial; text-align: center; padding: 20px; }
           input, select { margin: 10px 0; padding: 5px; width: 90%; }

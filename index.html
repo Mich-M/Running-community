@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.4, maximum-scale=3.0">
   <title>Løbeklubben</title>
-  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -32,18 +32,6 @@
 
     </nav>
 
-    <!-- <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'da',
-            includedLanguages: 'en,da', 
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        },  'google_translate_element');
-      }
-    </script>
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-
   </header>
 
   <!-- Hero Section -->
@@ -53,10 +41,13 @@
     <a href="#join" class="btn">Tilmeld dig</a>
   </section>
   
-  <!-- About Section -->
+  <!-- Gallery -->
   <section id="about">
-    <h2>Om os</h2>
-    <p>Vi er en venlig løbeklub åben for alle niveauer. Fra 5 km hyggeture til maratontræning – vi støtter hinanden hele vejen.</p>
+    <div class="about-images" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <img src="Images/Photos/Training/RunningFun1.jpg" alt="Hyggeløb1" style="max-width: 300px; width: 100%; height: auto;">
+      <img src="Images/Photos/Training/RunningFun2.jpg" alt="Hyggeløb2" style="max-width: 300px; width: 100%; height: auto;">
+      <img src="Images/Photos/Training/RunningFun3.jpg" alt="Hyggeløb3" style="max-width: 300px; width: 100%; height: auto;">
+    </div>
   </section>
   
   <!-- Weekly Training Section -->
@@ -170,7 +161,8 @@
   </section>
   
   <!-- Contact Section -->
-  <main id="contact">
+  <section id="contact">
+    <h2>Kontakt</h2>
     <form>
       <label for="name">Navn:</label>
       <input type="text" id="name" name="name" required>
@@ -194,7 +186,8 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
+
 
   <!-- Footer -->
   <footer>
