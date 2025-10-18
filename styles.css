@@ -558,24 +558,24 @@ footer a:hover {
 
 @media (max-width: 768px) {
   nav {
-    display: flex;
-    flex-direction: row;        /* Keep title and links in one row */
-    align-items: flex-start;    /* Align links to top of title */
-    justify-content: space-between; /* Title left, links right */
-    gap: 1rem;                  /* Space between title and links */
+    flex-direction: column;      /* Title on top, links below */
+    align-items: center;         /* Center everything horizontally */
+    gap: 0.5rem;                 /* Space between title and links */
   }
 
   .nav-links {
-    display: flex;
-    flex-direction: column;     /* Stack links vertically */
-    align-items: flex-start;    /* Align to left of column */
-    gap: 0.5rem;                /* Space between stacked links */
-    margin: 0;
-    padding: 0;
+    display: flex;               /* Make links flex items */
+    flex-direction: row;         /* Arrange links horizontally */
+    flex-wrap: wrap;             /* Wrap to next line if too long */
+    gap: 1rem;                   /* Space between links */
+    margin: 0;                   /* Remove extra margin */
+    padding: 0;                  /* Remove UL padding */
+    list-style: none;            /* Remove bullets */
+    justify-content: center;     /* Center links horizontally */
   }
 
   .nav-links li {
-    margin: 0;                  /* Remove default LI spacing */
+    margin: 0;                   /* Remove default LI spacing */
   }
 }
 
