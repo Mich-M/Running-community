@@ -87,11 +87,11 @@ window.addEventListener('scroll', () => {
 
   if (currentScroll > lastScroll) {
     // Scrolling down -> hide header fast
-    header.style.transition = 'top 0.1s ease-in';
+    header.style.transition = 'top 0.05s ease-in';
     header.style.top = '-100px';
   } else {
     // Scrolling up -> show header
-    header.style.transition = 'top 0.1s ease-out';
+    header.style.transition = 'top 0.05s ease-out';
     header.style.top = '0';
   }
 

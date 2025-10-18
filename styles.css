@@ -46,6 +46,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  gap: 0.5rem;
 }
 
 nav h2 {
@@ -68,6 +70,29 @@ nav a {
 
 nav a:hover {
   color: #ff6b6b;
+}
+
+.back-link {
+  margin-right: auto; /* push it left */
+}
+
+.language-switcher {
+  margin-left: auto; /* push it right */
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Mobile adjustment: stack vertically on small screens */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back-link, .language-switcher {
+    margin: 0.25rem 0;
+  }
 }
 
 /* Language Switcher */
