@@ -82,17 +82,30 @@ function capitalize(id) {
 const header = document.querySelector('header');
 let lastScroll = 0;
 
+// Detect mobile based on screen width
+const isMobile = window.innerWidth <= 768;
+
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > lastScroll) {
-    // Scrolling down -> hide header fast
-    header.style.transition = 'top 0.03s ease-in';
-    header.style.top = '-100px';
+    // Scrolling down -> hide header
+    if (isMobile) {
+      header.style.transition = 'none';  // no transition on mobile
+      header.style.top = '-100px';
+    } else {
+      header.style.transition = 'top 0.03s ease-in';
+      header.style.top = '-100px';
+    }
   } else {
     // Scrolling up -> show header
-    header.style.transition = 'top 0.03s ease-out';
-    header.style.top = '0';
+    if (isMobile) {
+      header.style.transition = 'none';
+      header.style.top = '0';
+    } else {
+      header.style.transition = 'top 0.03s ease-out';
+      header.style.top = '0';
+    }
   }
 
   lastScroll = currentScroll;
