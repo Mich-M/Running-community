@@ -72,34 +72,45 @@ nav a:hover {
   color: #ff6b6b;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* spacing between back-link and language-switcher */
+}
+.nav-right {
+  display: flex;
+  gap: 1rem;           /* space between back-link and language button */
+  margin-left: auto;    /* pushes this container to the right of the title */
+  align-items: center;  /* vertically center */
+}
+
 .back-link {
-    flex: 1; /* takes remaining space between title and language switcher */
-    text-align: center; /* center its text inside that space */
-    margin: 0; /* remove old margin */
-  }
+  text-align: right; /* optional, aligns text inside the link */
+  margin: 0; /* remove invalid margin */
+}
 
 .language-switcher {
-  margin-left: auto; /* push it right */
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-/* Mobile: stack vertically but stay to the right of title */
+
 @media (max-width: 600px) {
   nav {
-    display: flex;
-    align-items: flex-start; /* title top-aligned with right stack */
+    justify-content: space-between; /* keep title left, nav-right right */
+    align-items: flex-start;        /* top-align title and right stack */
   }
 
   .nav-right {
-    flex-direction: column; /* vertical stack */
-    align-items: flex-start; /* align left edge with title’s right edge */
-    margin-left: auto;       /* stay on right of title */
+    flex-direction: column;   /* stack back-link and language button */
+    align-items: flex-end;    /* align stack to the right */
+    gap: 0.5rem;              /* space between stacked links */
+    margin-left: 0;           /* remove desktop auto margin */
   }
 
   .back-link, .language-switcher {
-    margin: 0;
+    margin: 0;                /* remove any extra margin */
   }
 }
 
