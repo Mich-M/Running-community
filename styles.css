@@ -73,8 +73,10 @@ nav a:hover {
 }
 
 .back-link {
-  margin-right: auto; /* push it left */
-}
+    flex: 1; /* takes remaining space between title and language switcher */
+    text-align: center; /* center its text inside that space */
+    margin: 0; /* remove old margin */
+  }
 
 .language-switcher {
   margin-left: auto; /* push it right */
@@ -83,14 +85,16 @@ nav a:hover {
   gap: 0.4rem;
 }
 
-/* Mobile adjustment: stack vertically on small screens */
+/* Mobile layout: stacked vertically to the right of title */
 @media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
+  .nav-right {
+    flex-direction: column; /* vertical stacking */
+    align-items: flex-start; /* align left under title's right side */
+    margin-left: auto; /* push it to the right of title */
   }
 
-  .back-link, .language-switcher {
+  .back-link,
+  .language-switcher {
     margin: 0.25rem 0;
   }
 }
