@@ -116,6 +116,28 @@ nav a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  nav {
+    justify-content: flex-start; /* title left */
+    align-items: flex-start;     /* top-align everything */
+  }
+
+  nav ul {
+    flex-direction: column;     /* stack links vertically */
+    margin-left: auto;           /* push to the right of title */
+    gap: 0.5rem;                 /* space between stacked links */
+  }
+
+  nav ul li a {
+    white-space: nowrap;        /* prevent wrapping */
+  }
+
+  .language-switcher a {
+    justify-content: flex-end;  /* optional: align flag+text to right */
+  }
+}
+
+
 
 /* Language Switcher */
 .language-switcher a {
