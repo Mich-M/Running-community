@@ -97,14 +97,26 @@ nav a:hover {
 
 @media (max-width: 600px) {
   nav {
-    justify-content: flex-start; /* title stays left */
-    align-items: flex-start;     /* top-align */
+    display: flex;
+    justify-content: space-between; /* keep title left */
+    align-items: flex-start;        /* top-align everything */
   }
 
   .nav-links {
-    flex-direction: column; /* stack links vertically */
-    margin-left: auto;       /* push stack to the right of title */
-    gap: 0.5rem;             /* spacing between stacked links */
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    margin-left: auto;       /* push to the right of title */
+    gap: 0.5rem;
+  }
+
+  .nav-links li,
+  .language-switcher {
+    margin: 0;               /* remove extra spacing */
+  }
+
+  /* Align the first link with the title */
+  .nav-links {
+    padding-top: 0;          /* remove default UL padding */
   }
 
   .nav-links li a {
