@@ -95,36 +95,6 @@ nav a:hover {
   gap: 0.4rem;
 }
 
-@media (max-width: 600px) {
-  nav {
-    display: flex;
-    justify-content: space-between; /* title left, links right */
-    align-items: flex-start;        /* top-align everything */
-  }
-
-  /* Stack links vertically */
-  .nav-links {
-    display: flex;
-    flex-direction: column;  /* vertical stack */
-    margin-left: auto;       /* push to the right of title */
-    padding: 0;              /* remove UL padding */
-    gap: 0.5rem;
-  }
-
-  .nav-links li {
-    margin: 0;               /* remove default LI spacing */
-  }
-
-  /* Optional: keep links aligned to the right */
-  .nav-links {
-    align-items: flex-end;
-  }
-
-  .language-switcher a {
-    justify-content: flex-end;
-  }
-}
-
 /* Language Switcher */
 .language-switcher a {
   display: flex;
@@ -142,6 +112,19 @@ nav a:hover {
 
 .language-switcher a:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;       /* Keep title and nav in one row */
+    align-items: flex-start;   /* Align nav links at top */
+    gap: 1rem;                 /* gap between title and nav */
+  }
+
+  .nav-links {
+    flex-direction: column;    /* Vertical stack */
+    align-items: flex-start;   /* Align to left of column */
+  }
 }
 
 /* ==========================
@@ -585,7 +568,7 @@ footer a:hover {
 /* ==========================
    Responsive
    ========================== */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 1rem;
