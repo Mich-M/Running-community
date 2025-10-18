@@ -85,15 +85,21 @@ nav a:hover {
   gap: 0.4rem;
 }
 
-/* Mobile: stack vertically */
+/* Mobile: stack vertically but stay to the right of title */
 @media (max-width: 600px) {
+  nav {
+    display: flex;
+    align-items: flex-start; /* title top-aligned with right stack */
+  }
+
   .nav-right {
-    flex-direction: column; /* vertical stacking */
-    align-items: flex-start; /* align left under the title's right edge */
+    flex-direction: column; /* vertical stack */
+    align-items: flex-start; /* align left edge with title’s right edge */
+    margin-left: auto;       /* stay on right of title */
   }
 
   .back-link, .language-switcher {
-    margin: 0; /* reset spacing */
+    margin: 0;
   }
 }
 
