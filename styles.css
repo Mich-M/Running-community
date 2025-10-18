@@ -555,7 +555,29 @@ footer a:hover {
 /* ==========================
    Responsive
    ========================== */
+
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;      /* Title on top, links below */
+    align-items: flex-start;     /* Align everything to left */
+    gap: 0.5rem;                 /* Space between title and links */
+  }
+
+  .nav-links {
+    flex-direction: column;      /* Stack links vertically */
+    align-items: flex-start;     /* Align links to left */
+    gap: 0.5rem;                 /* Space between links */
+    margin: 0;                   /* Remove extra margin */
+    padding: 0;                  /* Remove UL padding */
+  }
+
+  .nav-links li {
+    margin: 0;                   /* Remove default LI spacing */
+  }
+}
+
+
+   /*@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 1rem;
