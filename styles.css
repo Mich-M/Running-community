@@ -95,27 +95,6 @@ nav a:hover {
   gap: 0.4rem;
 }
 
-
-@media (max-width: 600px) {
-  nav {
-    display: flex;
-    justify-content: space-between; /* keeps title left, right stack right */
-    align-items: flex-start;        /* top-align everything */
-  }
-
-  .nav-right {
-    display: flex;
-    flex-direction: column;  /* stack back-link and language button vertically */
-    align-items: flex-end;   /* optional: right-align the stacked items */
-    gap: 0.5rem;             /* space between stacked links */
-    margin-left: auto;        /* keeps this container pushed to the right of title */
-  }
-
-  .back-link, .language-switcher {
-    margin: 0;               /* remove any extra margin */
-  }
-}
-
 @media (max-width: 600px) {
   nav {
     justify-content: flex-start; /* title stays left */
@@ -136,8 +115,6 @@ nav a:hover {
     justify-content: flex-end;
   }
 }
-
-
 
 /* Language Switcher */
 .language-switcher a {
