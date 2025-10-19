@@ -1,3 +1,59 @@
-Description of the project
+# Description of the project
 
+This project is an attempt to create a website for "FTC - Byens hyggeløbeklub", a newly formed community running club. It provides information about the club, weekly training programs, events, and allows users to join the club or contact the team. The project is built using HTML, CSS, and JavaScript. This is of course not a complete website, but rather a first draft of a potential website for FTC.
 
+## Key Features
+
+1. **Responsive Layout**  
+   - Uses flexible CSS, media queries, and scaling to ensure the site looks good on both desktop and mobile devices.
+   - Hero sections, galleries, and team sections adapt to screen sizes.
+
+2. **Navigation**  
+   - Sticky header with navigation links.
+   - Language toggle between Danish and English.
+   - Smooth scrolling to page sections.
+
+3. **Training Programs**  
+   - Users can view programs for beginner, intermediate, and advanced runners.
+   - Tabs are controlled via JavaScript to show/hide program details dynamically.
+
+4. **Events**  
+   - Event pages include images, descriptions, and registration links.
+   - Dedicated pages for specific events like the 5 km Parkrun.
+
+5. **Membership Signup**  
+   - "Bliv medlem" button opens a multi-step popup form.
+   - Form collects personal information, contact details, running level, and additional notes.
+   - Includes a progress bar and confirmation message upon completion.
+
+6. **Contact Form**  
+   - Validates input before submission.
+   - Displays a modal to confirm details.
+   - Shows a temporary "thank you" message after submission.
+
+7. **Styling**  
+   - Clean modern design using CSS with rounded buttons, cards, and subtle shadows.
+   - Sections, images, and text are visually separated for clarity.
+
+8. **JavaScript Interactivity**  
+   - Modal handling for contact form.
+   - Dynamic training program tabs.
+   - Sticky header with scroll detection.
+   - Language toggle logic.
+   - Popup form with step-by-step interaction.
+
+## File Structure
+
+- `index.html` – Main homepage with hero, programs, events, join, and contact sections.  
+- `events.html` – General events page with images and descriptions.  
+- `event-5km.html` – Specific event page for the 5 km Parkrun.  
+- `om-os.html` – About us page with mission and team info.  
+- `styles.css` – Global styles for layout, responsiveness, and components.  
+- `interactivity.js` – JavaScript for form validation, tab interaction, popup forms, scrolling behavior, and language switching.  
+- `Images/` – Folder containing all images used in the site (flags, event photos, team photos, etc.).  
+
+## Technologies Used
+
+- HTML for page structure.
+- CSS3 for styling and responsive design.
+- JavaScript for interactivity and dynamic content.
