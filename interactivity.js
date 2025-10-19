@@ -1,42 +1,60 @@
-
 // --- Kontaktformular check with fancy modal ---
+// Select the contact form and modal elements
 const contactForm = document.querySelector('#contact form');
 const modal = document.getElementById('confirmationModal');
 const okBtn = document.getElementById('okBtn');
 const cancelBtn = document.getElementById('cancelBtn');
 
+// If the form and modal exist, set up event listeners
 if (contactForm && modal) {
+  // When the form is submitted
   contactForm.addEventListener('submit', event => {
-    event.preventDefault(); // stop immediate submission
+    event.preventDefault(); // prevent immediate submission
     modal.style.display = 'flex'; // show modal
   });
 
+  // When "OK" is clicked in the modal
   okBtn.addEventListener('click', () => {
     modal.style.display = 'none';
 
-    // Show thank-you message
+    // Create a wrapper to center the message
+    const wrapper = document.createElement('div');
+    wrapper.style.display = 'flex';
+    wrapper.style.justifyContent = 'center';
+    wrapper.style.margin = '0';
+
+    // Create the thank-you message
     const thankYouMsg = document.createElement('p');
     thankYouMsg.textContent = '🎉 Tak for beskeden! Vi svarer hurtigst muligt.';
     thankYouMsg.style.color = '#28a745';
-    thankYouMsg.style.textAlign = 'center';
-    thankYouMsg.style.margin = '20px 0';
     thankYouMsg.style.fontWeight = 'bold';
+    thankYouMsg.style.fontSize = '1.1em';
+    thankYouMsg.style.textAlign = 'center';
+    thankYouMsg.style.margin = '0';
 
-    contactForm.parentNode.insertBefore(thankYouMsg, contactForm.nextSibling);
+    // Append message into wrapper
+    wrapper.appendChild(thankYouMsg);
+
+    // Insert wrapper after the form
+    contactForm.parentNode.insertBefore(wrapper, contactForm.nextSibling);
+
+    // Reset form
     contactForm.reset();
 
-    // Auto-hide after 10 seconds
+    // Auto-hide message after 10 seconds
     setTimeout(() => {
-      thankYouMsg.remove();
+      wrapper.remove();
     }, 10000);
   });
 
+  // When "Cancel" is clicked, hide the modal
   cancelBtn.addEventListener('click', () => {
     modal.style.display = 'none';
   });
 }
 
 // --- Training program buttons ---
+// Keeps track of which program is currently displayed
 let currentProgram = null;
 
 function showProgram(programId) {
@@ -51,6 +69,7 @@ function showProgram(programId) {
   // Check that buttons exist
   if (!buttonMap[programId] || !document.getElementById(programId)) return;
 
+  // Toggle off if the same program is clicked again
   if (currentProgram === programId) {
     document.getElementById(programId).style.display = 'none';
     buttonMap[programId].innerText = capitalize(programId);
@@ -58,17 +77,20 @@ function showProgram(programId) {
     return;
   }
 
+  // Hide all programs and reset button text
   programs.forEach(id => {
     const programEl = document.getElementById(id);
     if (programEl) programEl.style.display = 'none';
     if (buttonMap[id]) buttonMap[id].innerText = capitalize(id);
   });
 
+  // Show selected program and update button text
   document.getElementById(programId).style.display = 'block';
   buttonMap[programId].innerText = capitalize(programId) + ' (Skjul)';
   currentProgram = programId;
 }
 
+// Capitalize program button text for display
 function capitalize(id) {
   switch(id) {
     case 'beginner': return 'Nybegynder';
@@ -79,12 +101,14 @@ function capitalize(id) {
 }
 
 // --- Scroller ----
+// Select header for hide/show on scroll
 const header = document.querySelector('header');
 let lastScroll = 0;
 
 // Detect mobile based on screen width
 const isMobile = window.innerWidth <= 768;
 
+// Hide header on scroll down, show on scroll up
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
 
@@ -132,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Toggle language on click
   languageButton.addEventListener('click', function (e) {
     e.preventDefault();
     currentLanguage = currentLanguage === 'da' ? 'en' : 'da';
@@ -145,11 +170,13 @@ document.addEventListener("DOMContentLoaded", function () {
 const joinButton = document.querySelector('#join button');
 if (joinButton) {
   joinButton.addEventListener('click', () => {
+    // Calculate popup position
     const width = 400;
     const height = 450;
     const left = (window.screen.width / 2) - (width / 2);
     const top = (window.screen.height / 2) - (height / 2);
 
+    // Open popup window
     const popupWindow = window.open(
       '',
       'Tilmeld',

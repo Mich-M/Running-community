@@ -1,19 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>5 km Hyggeløb</title>
+  <!-- Link to external stylesheet for layout and responsiveness -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Header & Navigation -->
   <header>
     <nav>
+      <!-- Club title/logo -->
       <h2>FTC - Byens hyggeløbeklub</h2>
+
+      <!-- Right-aligned navigation items -->
       <div class="nav-right">
+        <!-- Back link to homepage -->
         <a href="index.html" class="back-link">← Tilbage</a>
+        
+        <!-- Language toggle button (controlled by interactivity.js) -->
         <a href="#" id="language-toggle" class="language-switcher">
           <img src="Images/UK_flag.png" alt="English" width="20" height="14">
           <span>English</span>
@@ -21,44 +28,50 @@
       </div>
     </nav>
   </header>
-  <!--<header>
-    <nav>
-      <h2>FTC - Byens hyggeløbeklub</h2>
-      <a href="index.html" class="back-link">← Tilbage</a>
-      <a href="#" id="language-toggle" class="language-switcher">
-        <img src="Images/UK_flag.png" alt="English" width="20" height="14">
-        <span>English</span>
-      </a>
-    </nav>
-  </header>-->
 
+  <!-- Event Images -->
   <div class="event-images">
     <img src="Images/SøndermarkenReal.png" alt="Løbere i Søndermarken" class="event-image">
     <img src="Images/Kagebord.png" alt="Kagebord efter løbet" class="event-image">
   </div>
 
+  <!-- Main Event  -->
   <main class="event-page">
+    <!-- Event title -->
     <h2>5 km Hyggeløb</h2>
+
+    <!-- Event date info -->
     <p><strong>Dato:</strong> Hver lørdag året rundt </p>
+    
+    <!-- Event location info -->
     <p><strong>Startsted:</strong> Vi aftaler på dagen, om det bliver Damhusengen, Fælledparken, Amager Strand eller Amager Fælled</p>
+
+    <!-- Event description -->
     <p>
       En hyggelig rute gennem parker – perfekt for både begyndere, letøvede og øvede.
       Efter løbet vil der være kaffe og kage i klubhuset på Frederiksberg.
     </p>
+
+    <!-- Event registration instructions -->
     <p><strong>Tilmelding:</strong> 
       Tilmelding til Parkrun i København sker på deres hjemmeside ved at trykke på tilmeldingsknappen nedenfor.
     </p>
 
+    <!-- Signup button linking to Parkrun website -->
     <button class="btn btn-signup" onclick="window.location.href='https://www.parkrun.dk/'">
       Tilmeld dig
     </button>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; FTC - Byens hyggeløbeklub | Følg os på 
-      <a href="#">Instagram</a> • <a href="#">Facebook</a></p>
+    <p>
+      &copy; FTC - Byens hyggeløbeklub | Følg os på 
+      <a href="#">Instagram</a> • <a href="#">Facebook</a>
+    </p>
   </footer>
 
+  <!-- Link to external JS file for interactivity -->
   <script src="interactivity.js"></script>
 
 </body>
