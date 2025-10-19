@@ -390,25 +390,6 @@ section p {
 }
 
 /* ==========================
-   Gallery
-   ========================== */
-/*.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  justify-content: center;
-  max-width: 900px;
-  margin: 20px auto;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-/* ==========================
    Forms
    ========================== */
 form {
