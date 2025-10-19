@@ -558,29 +558,35 @@ footer a:hover {
 
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;      /* Title on top, links below */
-    align-items: center;         /* Center everything horizontally */
-    gap: 0.5rem;                 /* Space between title and links */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* make sure it centers vertically too */
+    gap: 0.5rem;
   }
 
-  nav h2 {
-    width: 100%;                 /* Take full width of the nav */
-    text-align: center;          /* Center the text */
+  nav h2,
+  .nav-left {
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     margin: 0;
     padding: 0;
     list-style: none;
-    justify-content: center;
   }
 
   .nav-links li {
     margin: 0;
   }
-}
 
+  .nav-right {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
