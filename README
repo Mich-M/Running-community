@@ -1,6 +1,6 @@
 # Description of the project
 
-This project is an attempt to create a website for "FTC - Byens hyggeløbeklub", a newly formed community running club. It provides information about the club, weekly training programs, events, and allows users to join the club or contact the team. The project is built using HTML, CSS, and JavaScript. This is of course not a complete website, but rather a first draft of a potential website for FTC.
+This project is an attempt to create a website for "FTC - Byens hyggeløbeklub", a newly formed community running club. It provides information about the club, weekly training programs, events, and allows users to join the club or contact the team. The project is built using HTML, CSS, and JavaScript. This is of course not a complete website, but rather a first draft of a potential website for FTC. Be aware that you do not access Facebook and Instragram by clicking on the buttons.
 
 ## Key Features
 
@@ -57,3 +57,12 @@ This project is an attempt to create a website for "FTC - Byens hyggeløbeklub",
 - HTML for page structure.
 - CSS3 for styling and responsive design.
 - JavaScript for interactivity and dynamic content.
+
+## Possible Future Updates
+
+There might be small updates for the website before the exam. The possible updates could be
+
+- Calling an API (or some other solution) to translate the text on the website (No translation does happen as yet).
+- Being able to send messages to some mail (probably my own personal mail)
+- Trying to work a bit further on making "Tilmeld dig" more responsive on a mobile phone (and maybe some other things).
+- Trying to work a bit further on making the website more dynamic (countdown for events)
