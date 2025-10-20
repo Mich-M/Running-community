@@ -170,32 +170,12 @@ document.addEventListener("DOMContentLoaded", function () {
 const joinButton = document.querySelector('#join button');
 if (joinButton) {
   joinButton.addEventListener('click', () => {
-    // Get screen width and height
-    const screenW = window.screen.width;
-    const screenH = window.screen.height;
 
-    // Determine popup size as a percentage of screen size
-    let width, height;
-
-    if (screenW >= 1200) {          // Desktop
-      width = Math.round(screenW * 0.5);  // 50% of screen width
-      height = Math.round(screenH * 0.6); // 60% of screen height
-    } else if (screenW >= 768) {    // Tablet/iPad
-      width = Math.round(screenW * 0.7);
-      height = Math.round(screenH * 0.7);
-    } else {                        // Mobile
-      width = Math.round(screenW * 0.95);
-      height = Math.round(screenH * 0.9);
-    }
-
-    // Center popup on screen
+    // Calculate popup position
+    const width = 400;
+    const height = 450;
     const left = (window.screen.width / 2) - (width / 2);
     const top = (window.screen.height / 2) - (height / 2);
-    // Calculate popup position
-    //const width = 400;
-    //const height = 450;
-    //const left = (window.screen.width / 2) - (width / 2);
-    //const top = (window.screen.height / 2) - (height / 2);
 
     // Open popup window
     const popupWindow = window.open(
