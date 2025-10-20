@@ -170,16 +170,22 @@ document.addEventListener("DOMContentLoaded", function () {
 const joinButton = document.querySelector('#join button');
 if (joinButton) {
   joinButton.addEventListener('click', () => {
-    // Detect if on a small screen (mobile)
+    // Get screen width and height
+    const screenW = window.screen.width;
+    const screenH = window.screen.height;
+
+    // Determine popup size as a percentage of screen size
     let width, height;
-    if (window.innerWidth <= 768) {
-      // On mobile: make it fit nicely in the viewport
-      width = window.innerWidth * 0.9;   // 90% of screen width
-      height = window.innerHeight * 0.9; // 90% of screen height
-    } else {
-      // On desktop: use fixed size
-      width = 400;
-      height = 450;
+
+    if (screenW >= 1200) {          // Desktop
+      width = Math.round(screenW * 0.5);  // 50% of screen width
+      height = Math.round(screenH * 0.6); // 60% of screen height
+    } else if (screenW >= 768) {    // Tablet/iPad
+      width = Math.round(screenW * 0.7);
+      height = Math.round(screenH * 0.7);
+    } else {                        // Mobile
+      width = Math.round(screenW * 0.95);
+      height = Math.round(screenH * 0.9);
     }
 
     // Center popup on screen
@@ -257,7 +263,6 @@ if (joinButton) {
             } else if(step === 5){
               html += \`
                 <h2>Step 5: Bekræft oplysninger</h2>
-                <p>Gennemgå dine oplysninger</p>
                 <button id="finishBtn">Afslut</button>
               \`;
             }
