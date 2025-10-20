@@ -48,7 +48,7 @@ This project is an attempt to create a website for "FTC - Byens hyggeløbeklub",
 - `events.html` – General events page with images and descriptions.  
 - `event-5km.html` – Specific event page for the 5 km Parkrun.  
 - `om-os.html` – About us page with mission and team info.  
-- `styles.css` – Global styles for layout, responsiveness, and components.  
+- `styles.css` – Global styles for layout and responsiveness.  
 - `interactivity.js` – JavaScript for form validation, tab interaction, popup forms, scrolling behavior, and language switching.  
 - `Images/` – Folder containing all images used in the site (flags, event photos, team photos, etc.).  
 
@@ -60,9 +60,12 @@ This project is an attempt to create a website for "FTC - Byens hyggeløbeklub",
 
 ## Possible Future Updates
 
-There might be small updates for the website before the exam. The possible updates could be
+There might be small updates for the website before the exam. The possible updates could be:
 
 - Calling an API (or some other solution) to translate the text on the website (No translation does happen as yet).
-- Being able to send messages to some mail (probably my own personal mail)
-- Trying to work a bit further on making "Tilmeld dig" more responsive on a mobile phone (and maybe some other things).
-- Trying to work a bit further on making the website more dynamic (countdown for events)
+- Being able to send messages to some mail (probably my own personal mail).
+- Creating a simple newsfeed in `events.html`.
+- Trying to work a bit further on making "Tilmeld dig" more responsive on a mobile phone.
+- Trying to work a bit further on making the website more dynamic (countdown for events).
+
+There is no guarantee that I succeed in doing these things, but this is what I intend to be working a bit on towards the exam.

@@ -170,11 +170,26 @@ document.addEventListener("DOMContentLoaded", function () {
 const joinButton = document.querySelector('#join button');
 if (joinButton) {
   joinButton.addEventListener('click', () => {
-    // Calculate popup position
-    const width = 400;
-    const height = 450;
+    // Detect if on a small screen (mobile)
+    let width, height;
+    if (window.innerWidth <= 768) {
+      // On mobile: make it fit nicely in the viewport
+      width = window.innerWidth * 0.9;   // 90% of screen width
+      height = window.innerHeight * 0.9; // 90% of screen height
+    } else {
+      // On desktop: use fixed size
+      width = 400;
+      height = 450;
+    }
+
+    // Center popup on screen
     const left = (window.screen.width / 2) - (width / 2);
     const top = (window.screen.height / 2) - (height / 2);
+    // Calculate popup position
+    //const width = 400;
+    //const height = 450;
+    //const left = (window.screen.width / 2) - (width / 2);
+    //const top = (window.screen.height / 2) - (height / 2);
 
     // Open popup window
     const popupWindow = window.open(
